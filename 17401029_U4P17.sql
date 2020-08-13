@@ -1,0 +1,22 @@
+/*
+	Erick Octavio Nolasco Machuca
+	Pratica: 17
+	NoControl:17401029
+	Fecha: 18 de mayo de 2020
+*/
+
+/*REALIZA LA RESTAURACION DE SUPERHEROES QUE VIENE EN LA
+EXPLICACIÓN DE LA SINTAXIS DEL MOVE*/
+
+RESTORE FILELISTONLY
+FROM DISK='C:\BD\unidad 4\Respaldos\RespCompHeroes1.BAK';
+
+RESTORE DATABASE HEROESDELMUNDO
+FROM DISK ='C:\BD\unidad 4\Respaldos\RespCompHeroes1.BAK'
+WITH MOVE 'SUPERHEROES.MDF'
+TO 'C:\BD\unidad 4\Respaldos\Disco3\SUPERHEROES.MDF'
+,
+MOVE 'SUPERHEROES.LDF'
+TO 'C:\BD\unidad 4\Respaldos\Disco3\SUPERHEROES.LDF'
+
+GO
